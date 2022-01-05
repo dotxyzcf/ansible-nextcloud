@@ -1,8 +1,0 @@
----
-- name: Register System-Release
-      shell: cat /etc/os-release
-      register: system_release
-- name: Update Sources
-  apt:
-    update_cache: yes
-  when: system_release.stdout|trim is match('.*Debian.*')
