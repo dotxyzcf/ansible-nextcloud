@@ -1,4 +1,4 @@
 ---
-- name: Update Sources
+- name: apt update
   apt:
     update_cache: yes
