@@ -1,0 +1,12 @@
+---
+- name: add php repo (1/2)
+  ansible.builtin.uri:
+    url: https://packages.sury.org/php/apt.gpg
+    dest: /usr/share/keyrings/php-archive-keyring.gpg
+- name: add php repo (2/2)
+  raw: echo "deb [signed-by=/usr/share/keyrings/php-archive-keyring.gpg] https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
+- name: add mariadb repo
+  raw: curl -LsS https://r.mariadb.com/downloads/mariadb_repo_setup | sudo bash
+- name: update sources
+  ansible.builtin.apt:
+    update_cache: yes

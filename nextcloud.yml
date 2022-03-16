@@ -1,5 +1,0 @@
----
-- host: {{ target }}
-- become: true
-  roles:
-    - role: main

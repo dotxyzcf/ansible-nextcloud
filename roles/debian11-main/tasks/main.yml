@@ -1,0 +1,11 @@
+---
+- name: update sources
+  raw: apt update -y
+- name: install sudo
+  raw: apt install sudo -y
+- name: install curl
+  raw: apt install curl -y
+- name: install python3-apt
+  raw: apt install python3-apt -y
+- name: install aptitude
+  raw: apt install aptitude -y
