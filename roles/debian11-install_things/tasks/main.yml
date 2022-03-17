@@ -2,5 +2,4 @@
 - name: install apache webserver
   apt:
     name: apache2
-    only_upgrade: yes
     state: latest
