@@ -1,9 +1,0 @@
----
-- hosts: "{{ target }}"
-  gather_facts: false
-  remote_user: root
-  roles:
-   - role: debian11-main
-     #when: (ansible_facts['distribution'] == "Debian" and ansible_facts['distribution_major_version'] == "11")
-   - role: debian11-repo_setup
-     #when: (ansible_facts['distribution'] == "Debian" and ansible_facts['distribution_major_version'] == "11")
