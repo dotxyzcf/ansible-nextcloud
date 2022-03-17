@@ -30,6 +30,7 @@
     - php8.0-redis
     - php8.0-sqlite3
     - libapache2-mod-php8.0
+    state: latest
 - name: install things to fix know nextcloud errors
   apt:
     name:
