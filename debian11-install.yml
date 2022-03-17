@@ -5,3 +5,4 @@
   roles:
    - role: debian11-main
    - role: debian11-repo_setup
+   - role: debian11-install_things
