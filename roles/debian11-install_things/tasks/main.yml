@@ -3,3 +3,34 @@
   apt:
     name: apache2
     state: latest
+- name: install mariadb database-server
+  apt:
+    name: mariadb-server
+    state: latest
+- name: install php and its extensions for nextcloud
+  apt:
+    name:
+    - php8.0
+    - php8.0-zip
+    - php8.0-xml
+    - php8.0-mbstring
+    - php8.0-gd
+    - php8.0-curl
+    - php8.0-imagick
+    - php8.0-intl
+    - php8.0-bcmath
+    - php8.0-gmp
+    - php8.0-cli
+    - php8.0-mysql
+    - php8.0-zip
+    - php8.0-gd
+    - php8.0-mbstring
+    - php8.0-curl
+    - php8.0-apcu
+    - php8.0-redis
+    - php8.0-sqlite3
+    - libapache2-mod-php8.0
+- name: install things to fix know nextcloud errors
+  apt:
+    name:
+    - libmagickcore-6.q16-6-extra
