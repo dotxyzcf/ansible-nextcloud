@@ -1,2 +1,25 @@
 ---
-- name: 
+- name: change php memory limit to 512MB
+  replace:
+      path: /etc/php/8.0/apache2/php.ini
+      regexp: 'memory_limit = *'
+      replace: 'memory_limit = 512M'
+      backup: yes
+- name: change php upload limit to 16GB
+  replace:
+      path: /etc/php/8.0/apache2/php.ini
+      regexp: 'upload_max_filesize = *'
+      replace: 'upload_max_filesize = 16G'
+      backup: yes
+- name: change php post size limit to 16GB
+  replace:
+      path: /etc/php/8.0/apache2/php.ini
+      regexp: 'post_max_size = *'
+      replace: 'post_max_size = 16G'
+      backup: yes
+- name: disable php output_buffering
+  replace:
+      path: /etc/php/8.0/apache2/php.ini
+      regexp: 'output_buffering = *'
+      replace: 'output_buffering = Off'
+      backup: yes
